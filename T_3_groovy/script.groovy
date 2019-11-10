@@ -37,7 +37,7 @@ void showSlowestTests(List slowest){
 
 
 def  log = """\
-4/9 Test #13: foo4 .............................   Passed    3.12 sec 
+4/9 Test #13: foo4 .............................   Passed    5000.00 sec 
 5/9 Test #11: foo2 .............................***Failed    3.13 sec 
 7/9 Test #10: foo1 .............................   Passed    22.01 sec 
 9/9 Test #15: foo6 .............................   Passed    10.66 sec 
@@ -69,6 +69,12 @@ def  log = """\
 1/19 Test #12: foo3 .............................   Passed    8.71 sec 
 6/19 Test #14: foo5 .............................***Failed    3.13 sec 
 1/19 Test #03: foo9 .............................***Timeout   15.55 sec """
+
+/*
+    As I am not fimiliar with your jenkins pipeline's 
+    ctest string so I have assumed Multiline, 
+    Interpolated string with escape character (/).
+*/
 
 def mylist = getSlowestTests(log);
 showSlowestTests(mylist);

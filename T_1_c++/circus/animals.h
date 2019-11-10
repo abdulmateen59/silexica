@@ -2,7 +2,7 @@
 using namespace std;
 
 class animals{
-    public: 
+    public:
         string name;
         int  age;
 
@@ -22,15 +22,19 @@ class animals{
             return age;
         }
 
-        virtual bool get_strips() {}
+        virtual bool get_strips() {
+            return false;
+        }
 
-        virtual bool get_rideable() {}
+        virtual bool get_rideable() {
+            return false;
+        }
 };
 
 
 class horse : public virtual animals{
     protected: 
-        bool rideable = false;
+        bool rideable;
 
     public:
         horse() : animals() {}
@@ -47,7 +51,7 @@ class horse : public virtual animals{
 
 class zebra : public virtual animals{
     protected: 
-        bool has_strips = false;
+        bool has_strips;
 
     public:
         zebra() : animals() {}
